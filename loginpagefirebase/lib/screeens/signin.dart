@@ -4,6 +4,8 @@ import 'package:loginpagefirebase/screeens/finalpage.dart';
 import 'package:loginpagefirebase/uihelper/widget.dart';
 
 class Signin extends StatefulWidget {
+  const Signin({super.key});
+
   @override
   State<Signin> createState() => signstate();
 }
