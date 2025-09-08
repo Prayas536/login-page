@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpagefirebase/screeens/Homepage.dart';
 
 class UiHelper {
   // buttons function, textfield ,
@@ -51,7 +52,14 @@ class UiHelper {
   static customalertbox(BuildContext context,String text ){
     return showDialog(context: context,builder: (BuildContext context){
       return AlertDialog(
+        
         title: Text(text),
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Homepage()));
+          }, child: Text("OK"))
+        ],
+        
       );
 
     }

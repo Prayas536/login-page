@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:loginpagefirebase/screeens/finalpage.dart';
+import 'package:loginpagefirebase/screeens/phoneauth.dart';
 import 'package:loginpagefirebase/uihelper/widget.dart';
 
 class Signin extends StatefulWidget {
@@ -65,6 +66,9 @@ class signstate extends State<Signin> {
               passwordcontroller.text.toString(),
             );
           }, "Sign IN"),
+          UiHelper.button((){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>phoneauth()));
+          }, "Sign in with number")
         ],
       ),
     );
